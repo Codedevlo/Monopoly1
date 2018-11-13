@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiplayer Monoploy</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body>
+    <script>
+      
+function dice1() {
+    //make all hidden
+    document.getElementById("1a").style.visibility = "Hidden";
+    document.getElementById("2a").style.visibility = "Hidden";
+    document.getElementById("3a").style.visibility = "Hidden";
+    document.getElementById("4a").style.visibility = "Hidden";
+    document.getElementById("5a").style.visibility = "Hidden";
+    document.getElementById("6a").style.visibility = "Hidden";
+    document.getElementById("1b").style.visibility = "Hidden";
+    document.getElementById("2b").style.visibility = "Hidden";
+    document.getElementById("3b").style.visibility = "Hidden";
+    document.getElementById("4b").style.visibility = "Hidden";
+    document.getElementById("5b").style.visibility = "Hidden";
+    document.getElementById("6b").style.visibility = "Hidden";
+    var d1;
+    var d2;
+    //declare random
+    d1 = Math.random(6);
+    d2 = Math.random(6);
+    d1 = d1 * 10;
+    d2 = d2 * 10;
+    d1 = Math.round(d1);
+    d2 = Math.round(d2);
+    while (d1 < 1 || d1 > 6) {
+        if (d1 > 6) {
+            d1 = d1 - d1 * 0.2;
+            d1 = Math.round(d1);
+        }
+        if (d1 < 1) {
+            d1 = d1 * 1.5;
+            d1 = Math.round(d1);
+        }
+    }
+    while (d2 < 1 || d2 > 6) {
+        if (d2 > 6) {
+            d2 = d2 - d2 * 0.2;
+            d2 = Math.round(d2);
+        }
+        if (d2 < 1) {
+            d2 = d2 * 1.5;
+            d2 = Math.round(d2);
+        }
+    }
+    //say d1 and d2 //just testing
+    /*alert(d1);
+    alert(d2);*/
+    //first dice
+    if (d1 === 1) {
+        document.getElementById("1a").style.visibility = "visible";
+    }
+    if (d1 === 2) {
+        document.getElementById("2a").style.visibility = "visible";
+    }
+    if (d1 === 3) {
+        document.getElementById("3a").style.visibility = "visible";
+    }
+    if (d1 === 4) {
+        document.getElementById("4a").style.visibility = "visible";
+    }
+    if (d1 === 5) {
+        document.getElementById("5a").style.visibility = "visible";
+    }
+    if (d1 === 6) {
+        document.getElementById("6a").style.visibility = "visible";
+    }
+    //second dice
+    if (d2 === 1) {
+        document.getElementById("1b").style.visibility = "visible";
+    }
+    if (d2 === 2) {
+        document.getElementById("2b").style.visibility = "visible";
+    }
+    if (d2 === 3) {
+        document.getElementById("3b").style.visibility = "visible";
+    }
+    if (d2 === 4) {
+        document.getElementById("4b").style.visibility = "visible";
+    }
+    if (d2 === 5) {
+        document.getElementById("5b").style.visibility = "visible";
+    }
+    if (d2 === 6) {
+        document.getElementById("6b").style.visibility = "visible";
+    }
+}
+    </script>
+    <style>
+       img:not(.board) {
+            visibility: hidden;
+       }
+ 
+       body {
+           background-color: forestgreen;
+       }
+
+       center {
+           text-align: center;
+       }
+    </style>
+    <img src="pics/dice1.jpg" id="1a">
+    <img src="pics/dice2.jpg" id="2a">
+    <img src="pics/dice3.jpg" id="3a">
+    <img src="pics/dice4.jpg" id="4a">
+    <img src="pics/dice5.jpg" id="5a">
+    <img src="pics/dice6.jpg" id="6a">
+    <img src="pics/dice1.jpg" id="1b">
+    <img src="pics/dice2.jpg" id="2b">
+    <img src="pics/dice3.jpg" id="3b">
+    <img src="pics/dice4.jpg" id="4b">
+    <img src="pics/dice5.jpg" id="5b">
+    <img src="pics/dice6.jpg " id="6b">
+    <input id="" type="button" onclick="dice1() " value="Roll Dice">
+    <div id="board">
+        <div id="top_row">
+            <img src="pics/board/parking.jpg" class="board">
+            <img src="pics/board/Kentucky.jpg" class="board">
+            <img src="pics/board/chance.jpg" class="board">
+            <img src="pics/board/indiana.jpg" class="board">
+            <img src="pics/board/illinois.jpg" class="board">
+            <img src="pics/board/b&o_railroad.jpg" class="board">
+            <img src="pics/board/atlantic.jpg" class="board">
+            <img src="pics/board/ventnor.jpg" class="board">
+            <img src="pics/board/w_w.jpg" class="board">
+            <img src="pics/board/marvin.jpg" class="board">
+            <img src="pics/board/Go_to_jail.jpg" class="board">
+        </div>
+        <div id="left_row">
+            <img src="pics/board/New_York.jpg" class="board"><br>
+            <img src="pics/board/tennessee.jpg" class="board"><br>
+            <img src="pics/board/chest_left_row.jpg" class="board"><br>
+            <img src="pics/board/st._james.jpg" class="board"><br>
+            <img src="pics/board/pen_railroad.jpg" class="board"><br>
+            <img src="pics/board/states.jpg" class="board"><br>
+            <img src="pics/board/E_C.jpg" class="board"><br>
+            <img src="pics/board/st._charles.jpg" class="board"><br>
+            <img src="pics/board/jail.jpg" class="board"><br>
+        </div>
+        <center class="middle">
+            <img src="pics/board/Logo.jpg" class="board" id="middle">
+        </center>
+    </div>
+    <input id="" type="button" onclick="dice3() " value="Roll Dice2 ">
+</body>
+
+</html>
